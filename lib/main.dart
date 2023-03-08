@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/utils/colours.dart';
 
+import './responsive/responsive_layout_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
