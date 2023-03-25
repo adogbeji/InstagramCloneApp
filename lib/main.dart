@@ -8,8 +8,8 @@ import './responsive/web_screen_layout.dart';
 import './responsive/mobile_screen_layout.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();  // Ensures Flutter widgets have been initialised
+  await Firebase.initializeApp();  // Initialises Firebase
   runApp(const MyApp());
 }
 
