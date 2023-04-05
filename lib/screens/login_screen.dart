@@ -11,7 +11,18 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Login Screen'),
+      body: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 32),
+          width: double.infinity,
+          child: Column(
+            children: <Widget>[
+              // Text field input for email
+              // Text field input for password
+            ],
+          ),
+        )
+      ),
     );
   }
 }
