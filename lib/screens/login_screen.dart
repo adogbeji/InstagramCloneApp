@@ -27,6 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 64,
               ),
               // Text field input for email
+              const SizedBox(height: 64,),
               // Text field input for password
               // Login Button
               // Signup link
