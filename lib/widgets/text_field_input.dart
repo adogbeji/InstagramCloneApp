@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TextFieldInput extends StatelessWidget {
+  final TextEditingController textEditingController;
+  final bool isPass;
+  final String hintText;
+  final TextInputType textInputType;
   const TextFieldInput({Key? key}) : super(key: key);
 
   @override
@@ -11,10 +15,15 @@ class TextFieldInput extends StatelessWidget {
     return TextField(
       // controller: ,
       decoration: InputDecoration(
-        hintText: inputBorder,
+        // hintText: ,
         border: inputBorder,
-        focusedBorder: inputBorder
+        focusedBorder: inputBorder,
+        enabledBorder: inputBorder,
+        filled: true,
+        contentPadding: const EdgeInsets.all(8)
       ),
+      // keyboardType: ,
+      obscureText: ,
     );
   }
 }
