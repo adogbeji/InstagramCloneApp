@@ -20,6 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              Flexible(child: Container(), flex: 2,),
               // SVG Image
               SvgPicture.asset(
                 'assets/ic_instagram.svg',
