@@ -45,9 +45,15 @@ class _LoginScreenState extends State<LoginScreen> {
               TextFieldInput(
                 hintText: 'Enter your email',
                 textInputType: TextInputType.emailAddress,
-                // textEditingController: ,
+                textEditingController: _emailController,
               ),
               // Text field input for password
+              TextFieldInput(
+                hintText: 'Enter your password',
+                textInputType: TextInputType.text,
+                textEditingController: _passwordController,
+                isPass: true,
+              ),
               // Login Button
               // Signup link
             ],
