@@ -80,7 +80,27 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: blueColor
               ),
             ),
+            const SizedBox(
+              height: 12,
+            ),
+            Flexible(
+              child: Container(),
+              flex: 2,
+            ),
             // Signup link
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: const Text('Don\'t have an account?'),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: const Text('Sign up'),
+                ),
+              ],
+            ),
           ],
         ),
       )),
