@@ -66,18 +66,19 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 24,
             ),
             // Login Button
-            Container(
-              child: const Text('Login'),
-              width: double.infinity,
-              alignment: Alignment.center,
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              decoration: const ShapeDecoration(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(4),
-                  ),
-                ),
-                color: blueColor
+              InkWell(
+              child: Container(
+                child: const Text('Login'),
+                width: double.infinity,
+                alignment: Alignment.center,
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                decoration: const ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(4),
+                      ),
+                    ),
+                    color: blueColor),
               ),
             ),
             const SizedBox(
@@ -95,9 +96,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: const Text('Don\'t have an account?'),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: const Text('Sign up'),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: const Text(
+                      'Sign up',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
