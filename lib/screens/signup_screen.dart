@@ -13,6 +13,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _bioController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
 
   @override
   void dispose() {
@@ -20,6 +22,8 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _bioController.dispose();
+    _usernameController.dispose();
   }
 
   @override
@@ -45,6 +49,15 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 64,
             ),
+            // Test field input for username
+            TextFieldInput(
+              hintText: 'Enter your username',
+              textInputType: TextInputType.text,
+              textEditingController: _usernameController,
+            ),
+            const SizedBox(
+              height: 24,
+            ),
             // Text field input for email
             TextFieldInput(
               hintText: 'Enter your email',
@@ -64,10 +77,17 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 24,
             ),
+            TextFieldInput(
+              hintText: 'Enter your bio',
+              textInputType: TextInputType.text,
+              textEditingController: _bioController,
+            ),
+            const SizedBox(
+              height: 24,
+            ),
             // Login Button
               InkWell(
               child: Container(
-                child: const Text('Login'),
                 width: double.infinity,
                 alignment: Alignment.center,
                 padding: const EdgeInsets.symmetric(vertical: 12),
@@ -77,7 +97,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Radius.circular(4),
                       ),
                     ),
-                    color: blueColor),
+                    color: blueColor
+                ),
+                child: const Text('Login'),
               ),
             ),
             const SizedBox(
