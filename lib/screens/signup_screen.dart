@@ -3,14 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/utils/colours.dart';
 import 'package:instagram_clone/widgets/text_field_input.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> { 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _bioController = TextEditingController();
@@ -48,6 +48,14 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const SizedBox(
               height: 64,
+            ),
+            // Circular widget to accept & show selected file
+            Stack(children: [
+                CircleAvatar(
+                  radius: 64,
+                  backgroundImage: NetworkImage('IMAGE URL HERE'),
+                )
+              ]
             ),
             // Test field input for username
             TextFieldInput(
