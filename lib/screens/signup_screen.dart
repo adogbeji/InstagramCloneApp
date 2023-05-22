@@ -10,7 +10,7 @@ class SignupScreen extends StatefulWidget {
   State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> { 
+class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _bioController = TextEditingController();
@@ -51,11 +51,21 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
             // Circular widget to accept & show selected file
             Stack(children: [
-                CircleAvatar(
-                  radius: 64,
-                  backgroundImage: NetworkImage('IMAGE URL HERE'),
-                )
-              ]
+              // CircleAvatar(
+              //   radius: 64,
+              //   backgroundImage: NetworkImage('IMAGE URL HERE'),
+              // ),
+              Positioned(
+                bottom: -10,
+                left: 80,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.add_a_photo),
+                ),
+              ),
+            ]),
+            const SizedBox(
+              height: 24,
             ),
             // Test field input for username
             TextFieldInput(
@@ -94,7 +104,7 @@ class _SignupScreenState extends State<SignupScreen> {
               height: 24,
             ),
             // Login Button
-              InkWell(
+            InkWell(
               child: Container(
                 width: double.infinity,
                 alignment: Alignment.center,
@@ -105,8 +115,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         Radius.circular(4),
                       ),
                     ),
-                    color: blueColor
-                ),
+                    color: blueColor),
                 child: const Text('Login'),
               ),
             ),
