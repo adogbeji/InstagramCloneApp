@@ -16,7 +16,7 @@ class AuthMethods {
     String res = 'Some error occurred';
 
     try {
-
+      if (email.isNotEmpty || password.isNotEmpty || username.isNotEmpty || bio.isNotEmpty || file != null) {}
     } catch(err) {
       res = err.toString();
     }
