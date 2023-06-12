@@ -24,7 +24,7 @@ class AuthMethods {
 
         print(cred.user!.uid);
         // Add user to database
-        _firestore.collection('users').doc(cred.user!.uid).set({
+        await _firestore.collection('users').doc(cred.user!.uid).set({
           'username': username,
           'uid': cred.user!.uid,
           'email': email,
@@ -32,6 +32,18 @@ class AuthMethods {
           'followers': [],
           'following': []
         });
+
+        // Alternative approach
+        // await _firestore.collection('users').add({
+        //   'username': username,
+        //   'uid': cred.user!.uid,
+        //   'email': email,
+        //   'bio': bio,
+        //   'followers': [],
+        //   'following': []
+        // });
+
+        res = 'Success';
       }
     } catch(err) {
       res = err.toString();
