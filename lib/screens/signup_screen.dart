@@ -136,8 +136,8 @@ class _SignupScreenState extends State<SignupScreen> {
                   child: const Text('Don\'t have an account?'),
                 ),
                 GestureDetector(
-                  onTap: () => {
-                    AuthMethods().signUpUser(email: _emailController.text, password: _passwordController.text, username: _usernameController.text, bio: _bioController.text),
+                  onTap: () async {
+                    String res = await AuthMethods().signUpUser(email: _emailController.text, password: _passwordController.text, username: _usernameController.text, bio: _bioController.text);
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 8),
