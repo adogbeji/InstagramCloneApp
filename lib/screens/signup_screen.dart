@@ -27,6 +27,8 @@ class _SignupScreenState extends State<SignupScreen> {
     _usernameController.dispose();
   }
 
+  void selectImage() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +62,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 bottom: -10,
                 left: 80,
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: selectImage,
                   icon: const Icon(Icons.add_a_photo),
                 ),
               ),
@@ -138,6 +140,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 GestureDetector(
                   onTap: () async {
                     String res = await AuthMethods().signUpUser(email: _emailController.text, password: _passwordController.text, username: _usernameController.text, bio: _bioController.text);
+                    print(res);
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 8),
